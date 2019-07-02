@@ -69,15 +69,18 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 
-  # Install Node
-   #config.vm.provision "shell", path: "provisioners/node_install.sh"
+  # Install Node and Ruby
+    #config.vm.provision "shell", path: "provisioners/node_install.sh"
+    #config.vm.provision "shell", path: "provisioners/ruby_install.sh" privileged: false,
   # end
 
   # Install Apache,  MySQL and php
-   #config.vm.box = "hashicorp/precise64"
+    #config.vm.box = "hashicorp/precise64"
     #config.vm.provision :shell, path: "provisioners/apache_install.sh"
     #config.vm.provision :shell, path: "provisioners/mysql_install.sh"
     #config.vm.provision :shell, path: "provisioners/php_install.sh"
   # end
+
+  
 
 end
