@@ -71,8 +71,12 @@ Vagrant.configure("2") do |config|
 
   # Install Node and Ruby
     #config.vm.provision "shell", path: "provisioners/node_install.sh"
-    #config.vm.provision "shell", path: "provisioners/ruby_install.sh" privileged: false,
+    #config.vm.provision "shell", path: "provisioners/ruby_install.sh", privileged: false,
   # end
+
+  # Install sass compass, breakpoint, susy
+    #config.vm.provision "shell", path: "provisioners/style_install.sh", privileged: false
+  #
 
   # Install Apache,  MySQL and php
     #config.vm.box = "hashicorp/precise64"
