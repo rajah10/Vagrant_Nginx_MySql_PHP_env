@@ -4,9 +4,19 @@
  `vagrant up`
  #### Check Vagrantfile to uncomment provisioner path, run `vagrant provision` if need
 
-## Setup the config file
+## Setup the config file and PHP
 
 `vagrant shh `
+
+### Configure the PHP Processor
+
+Open `sudo nano /etc/php/7.2/fpm/php.ini` 
+
+Uncomment and change 1 to 0 `cgi.fix_pathinfo=0`
+
+Restart `sudo systemctl restart php7.2-fpm`
+
+### Configure the vhost file
 
 `sudo nano /etc/nginx/sites-available/example.com`
 
