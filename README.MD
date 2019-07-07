@@ -4,7 +4,7 @@
  `vagrant up`
  #### Check Vagrantfile to uncomment provisioner path, run `vagrant provision` if need
 
-## Setup the site-avalible 
+## Setup the config file
 
 `vagrant shh `
 
