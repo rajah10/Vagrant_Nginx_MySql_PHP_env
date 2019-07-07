@@ -28,11 +28,11 @@ Vagrant.configure("2") do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
-  config.vm.network "forwarded_port", guest: 80, host: 8081, host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest: 80, host: 8082, host_ip: "127.0.0.1",  id: "nginx"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "private_network", type: "dhcp",  id: "nginx"
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
@@ -76,13 +76,13 @@ Vagrant.configure("2") do |config|
 
   # Install sass compass, breakpoint, susy
     #config.vm.provision "shell", path: "provisioners/style_install.sh", privileged: false
-  #
+  #apch
 
-  # Install Apache,  MySQL and php
+  # Install nginx,  MySQL and php
     #config.vm.box = "hashicorp/precise64"
-    #config.vm.provision :shell, path: "provisioners/apache_install.sh"
+    #config.vm.provision :shell, path: "provisioners/nginx_install.sh"
     #config.vm.provision :shell, path: "provisioners/mysql_install.sh"
-    #config.vm.provision :shell, path: "provisioners/php_install.sh"
+    config.vm.provision :shell, path: "provisioners/php_install.sh"
   # end
 
   
